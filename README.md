@@ -100,13 +100,17 @@ cd openwrt/ && make menuconfig
 
 ### 2.2下载本次修改的配置文件（可选）
 下次升级就可以直接用，不必再 ssh 选择插件了
+!!! 这一步可能导致编译失败 ！！！
+！！！ 原因不太清楚 ！！！
 
+ 如果有多次进行保存，删除旧的设置 `rm -f .config.old`
+ 
 ```
-rm -f .config.old && make defconfig && ./scripts/diffconfig.sh > seed.config && cat seed.config
+make defconfig && ./scripts/diffconfig.sh > seed.config && cat seed.config
 ```
 
-*自己复制保存到合适的位置
-*在手动修改成项目的 .config 文件
+ *自己复制保存到合适的位置*
+ *在手动修改成项目的 .config 文件*
 
 ### 2.3退出 ssh
 在命令行界面 `ctrl`+`D`  退出 ssh
