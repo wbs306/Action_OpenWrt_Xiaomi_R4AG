@@ -43,6 +43,7 @@ export shanchu1=$(expr $shanchu1 - 1)
 export shanchu1=$(echo $shanchu1"r")
 sed -i "$shanchu1 youhua.txt" target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
 rm -rf youhua.txt
+sed -i 's/spi-max-frequency = <10000000>/spi-max-frequency = <50000000>/g' target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
 ## 2.修改mt7621.mk
 export imsize1=$(grep  -a -n -e 'define Device/xiaomi_mi-router-4a-gigabit' target/linux/ramips/image/mt7621.mk|cut -d ":" -f 1)
 export imsize1=$(expr $imsize1 + 2)
