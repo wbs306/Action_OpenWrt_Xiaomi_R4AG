@@ -63,6 +63,12 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cp $GITHUB_WORKSPACE/$PATCH_FILE $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.4/476-mtd-spi-nor-add-eon-en25q128.patch
 
+    - name: Cache
+      uses: klever1988/cachewrtbuild@main
+      with:
+        ccache: 'true'
+        prefix: $GITHUB_WORKSPACE/openwrt
+
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
