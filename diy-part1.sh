@@ -46,6 +46,6 @@ rm -rf youhua.txt
 sed -i 's/spi-max-frequency = <10000000>/spi-max-frequency = <50000000>/g' target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
 ## 2.修改mt7621.mk
 export imsize1=$(grep  -a -n -e 'define Device/xiaomi_mi-router-4a-gigabit' target/linux/ramips/image/mt7621.mk|cut -d ":" -f 1)
-export imsize1=$(expr $imsize1 + 2)
+export imsize1=$(expr $imsize1 + 3)
 export imsize1=$(echo $imsize1"s")
 sed -i "$imsize1/IMAGE_SIZE := .*/IMAGE_SIZE := 16064k/" target/linux/ramips/image/mt7621.mk
