@@ -1,6 +1,6 @@
 # Actions-OpenWrt-Xiaomi-R4AGv2
 ### Xiaomi R4AG_V2 Breed Flash 直刷版 ( R4AG V2 HW changed!)
-Many Thx to Wbs2036's support for Xiaomi R4AG V2 !   wbs306/lede@a2a3a4a commits: 
+Many Thx to wbs306's support for Xiaomi R4AG V2 !   [wbs306/lede@a2a3a4a](https://github.com/coolsnowwolf/lede/tree/a2a3a4a8d2b4c427e066200a8a64289fe4d6c281) commits: 
   - 1. target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
   - 2. target/linux/ramips/image/mt7621.mk
   - 3. target/linux/ramips/mt7621/base-files/etc/board.d/02_network
