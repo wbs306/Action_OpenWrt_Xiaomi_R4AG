@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 编译小米R4AGv2千兆版 
+name: Build R4AGv2 FW 编译小米R4AGv2千兆版 
 
 on:
   repository_dispatch:
