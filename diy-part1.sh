@@ -8,44 +8,23 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
-#
 
-# 取消插件注释
-# sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+## Xiaomi R4AG_V2 Breed Flash 直刷版 ( R4AG V2 HW changed!)
+## Many Thx to Wbs2036's support for Xiaomi R4AG V2 ! wbs306/lede@a2a3a4a commits: 
+## 1.target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
+## 2.target/linux/ramips/image/mt7621.mk
+## 3.target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 
-# 添加插件源码
-# sed -i '$a src-git ddnsto https://github.com/linkease/ddnsto-openwrt' feeds.conf.default
-# sed -i '$a src-git adguardhome https://github.com/rufengsuixing/luci-app-adguardhome' feeds.conf.default
-# sed -i '$a src-git dnsfilter https://github.com/garypang13/luci-app-dnsfilter' feeds.conf.default
-sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-
-# 添加插件源码
-# sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-# passwall依赖
-# sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 ### 修改主题文件
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
-### 修改为R4A千兆版Breed直刷版
-## mt7621_xiaomi_mir3g-v2.dts 好像被改成了 mt7621_xiaomi_mi-router-4a-3g-v2.dtsi  测试一下
-## 1.修改 mt7621_xiaomi_mir3g-v2.dts
-export shanchu1=$(grep  -a -n -e '&spi0 {' target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi|cut -d ":" -f 1)
-export shanchu2=$(grep  -a -n -e '&pcie {' target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi|cut -d ":" -f 1)
-export shanchu2=$(expr $shanchu2 - 1)
-export shanchu2=$(echo $shanchu2"d")
-sed -i $shanchu1,$shanchu2 target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
-grep  -Pzo '&spi0[\s\S]*};[\s]*};[\s]*};[\s]*};' target/linux/ramips/dts/mt7621_youhua_wr1200js.dts > youhua.txt
-echo "" >> youhua.txt
-echo "" >> youhua.txt
-export shanchu1=$(expr $shanchu1 - 1)
-export shanchu1=$(echo $shanchu1"r")
-sed -i "$shanchu1 youhua.txt" target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
-rm -rf youhua.txt
-sed -i 's/spi-max-frequency = <10000000>/spi-max-frequency = <50000000>/g' target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
-## 2.修改mt7621.mk
-export imsize1=$(grep  -a -n -e 'define Device/xiaomi_mi-router-4a-gigabit' target/linux/ramips/image/mt7621.mk|cut -d ":" -f 1)
-export imsize1=$(expr $imsize1 + 3)
-export imsize1=$(echo $imsize1"s")
-sed -i "$imsize1/IMAGE_SIZE := .*/IMAGE_SIZE := 16064k/" target/linux/ramips/image/mt7621.mk
+# 添加插件源码
+# sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+# sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+echo 'src-git small8 https://github.com/kenzok8/small-package' >>feeds.conf.default
+
+# Modify default IP
+#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
