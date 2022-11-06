@@ -4,8 +4,9 @@
 Powered by LuCI Master (git-22.289.58375-2a380a3) / ArgonTheme v1.7.3 / MrTaiKe build 2022.11.06 @ OpenWrt R22.9.1
 
 ### Packages added:
-  -https://github.com/kenzok8/small-package
-  -https://github.com/jerrykuku/luci-theme-argon.git
+ -https://github.com/kenzok8/small-package
+ 
+ -https://github.com/jerrykuku/luci-theme-argon.git
 
 
 
