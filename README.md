@@ -3,6 +3,11 @@
 ![image](https://user-images.githubusercontent.com/117250841/200182184-1374ebfe-cca5-40fb-a7ca-4eaa1444f2f0.png)
 Powered by LuCI Master (git-22.289.58375-2a380a3) / ArgonTheme v1.7.3 / MrTaiKe build 2022.11.06 @ OpenWrt R22.9.1
 
+### Packages added:
+  -https://github.com/kenzok8/small-package
+  -https://github.com/jerrykuku/luci-theme-argon.git
+
+
 
 ## How to BREED flash Openwrt firmware?
 ```
