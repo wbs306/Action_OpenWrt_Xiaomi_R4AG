@@ -31,8 +31,8 @@ Use this two bin file
 ```
 ![image](https://user-images.githubusercontent.com/117250841/200181428-b9628072-b1d6-4f23-a799-3b06c63c12bb.png)
 
-
-Many Thanks to wbs306's support for Xiaomi R4AG V2  hardware changes!   [wbs306/lede@a2a3a4a](https://github.com/coolsnowwolf/lede/tree/a2a3a4a8d2b4c427e066200a8a64289fe4d6c281) commits: 
+## Many Thanks to [wbs306](https://github.com/wbs306)
+Many Thanks to wbs306's support for Xiaomi R4AG V2  hardware changes!   [wbs306/lede@a2a3a4a](https://github.com/wbs306/lede) commits: 
   1. target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
   2. target/linux/ramips/image/mt7621.mk
   3. target/linux/ramips/mt7621/base-files/etc/board.d/02_network
