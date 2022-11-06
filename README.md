@@ -24,14 +24,20 @@ python3 remote_command_execution_vulnerability_v2.py # Run the script
 ```
 Step#2 Boot BREED 
 Refer this instrution https://www.right.com.cn/forum/thread-4007071-1-1.html
+(This instruction is just a reference, make some adjustments to what you need)
+
 Go to https://breed.hackpascal.net, For RA4Gv2, download breed-mt7621-pbr-m1.bin 
+After successfully Telnet 192.168.31.1, use ftp app, copy it over to router's tmp folder.
+
+run the following script
+mtd -r write /tmp/breed-mt7621-pbr-m1.bin Bootloader
 ```
 ![image](https://user-images.githubusercontent.com/117250841/200181357-1ba254f4-51ad-4442-974e-de9b38519f25.jpeg)
 
 
 ```
 Step#3 Use BREED web to flash 
-Use this two bin file 
+Use this two bin files 
 1.eeprom.bin
 2.openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2-squashfs-sysupgrade.bin
 ```
