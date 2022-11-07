@@ -10,6 +10,21 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+# Add packages
+git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
+git clone https://github.com/kenzok8/small package/small
+git clone https://github.com/NueXini/NueXini_Packages.git package/NueXini_Packages
+git clone https://github.com/liuran001/openwrt-packages package/liuran001_packages
+
+# Add theme package
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git package/lean/luci-theme-infinityfreedom
+git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
+git clone https://github.com/YL2209/luci-theme-ifit.git package/lean/luci-theme-ifit
+git clone https://github.com/tty228/luci-app-serverchan.git package/lean/luci-app-serverchan
+
+
+
 # 修改openwrt登陆地址,把下面的192.168.5.1修改成你想要的就可以了
 sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
@@ -31,12 +46,6 @@ sed -i 's/encryption=none/encryption=psk2/g' package/kernel/mac80211/files/lib/w
 
 
 
-#下载主题luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git package/lean/luci-theme-infinityfreedom
-git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
-git clone https://github.com/YL2209/luci-theme-ifit.git package/lean/luci-theme-ifit
-git clone https://github.com/tty228/luci-app-serverchan.git package/lean/luci-app-serverchan
 
 
 
