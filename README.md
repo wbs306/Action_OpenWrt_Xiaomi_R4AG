@@ -4,6 +4,7 @@
 ![image](https://user-images.githubusercontent.com/117250841/200182184-1374ebfe-cca5-40fb-a7ca-4eaa1444f2f0.png)
 Powered by LuCI Master (git-22.289.58375-2a380a3) / ArgonTheme v1.7.3 / MrTaiKe build 2022.11.06 @ OpenWrt R22.9.1
 
+### Openwrt Branch: https://github.com/wbs306/lede
 ### Packages added:
  ##### 1.https://github.com/kenzok8/small-package
  ##### 2.https://github.com/jerrykuku/luci-theme-argon.git
