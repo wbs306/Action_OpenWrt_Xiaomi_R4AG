@@ -26,7 +26,7 @@ env:
   CONFIG_FILE: R4AGv2.config
   DIY_P1_SH: style/diy-part1_feeds.sh
   DIY_P2_SH: style/diy-part2_config.sh
-  DIY_P3_SH: style/diy-part3_mf.sh
+  DIY_P3_SH: style/diy-part3_mv.sh
   PATCH_FILE: 476-mtd-spi-nor-add-eon-en25q128.patch
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: false
