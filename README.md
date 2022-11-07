@@ -1,6 +1,8 @@
 
 ## Xiaomi R4AGv2 Hardware changed! Breed Flash 直刷版 (R4A Gigabit,R4AG_V2, R4AG V2)
 ### Note: You are welcome trying it out. You Agree to Proceed and Use at your own risk. 
+### Note: LED lights seems not working properly.
+
 ![image](https://user-images.githubusercontent.com/117250841/200182184-1374ebfe-cca5-40fb-a7ca-4eaa1444f2f0.png)
 Powered by LuCI Master (git-22.289.58375-2a380a3) / ArgonTheme v1.7.3 / MrTaiKe build 2022.11.06 @ OpenWrt R22.9.1
 
