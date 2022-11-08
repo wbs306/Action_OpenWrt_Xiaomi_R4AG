@@ -1,15 +1,18 @@
 
 ## Xiaomi R4AGv2 Hardware changed! Breed Flash 直刷版 (R4A Gigabit,R4AG_V2, R4AG V2)
+## Firmware to flash: 
+### - openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2-squashfs-sysupgrade.bin
+
 ### Note: You are welcome trying it out. You Agree to Proceed and Use at your own risk. 
 ### Note: LED lights seems not working properly.
 
 ![image](https://user-images.githubusercontent.com/117250841/200182184-1374ebfe-cca5-40fb-a7ca-4eaa1444f2f0.png)
-Powered by LuCI Master (git-22.289.58375-2a380a3) / ArgonTheme v1.7.3 / MrTaiKe build 2022.11.06 @ OpenWrt R22.9.1
 
-### Openwrt Branch: https://github.com/wbs306/lede
+### Refer to https://github.com/wbs306/lede
 ### Packages added:
  ##### 1.https://github.com/kenzok8/small-package
  ##### 2.https://github.com/jerrykuku/luci-theme-argon.git
+
 
 
 ## How to BREED flash Openwrt firmware?
@@ -25,7 +28,7 @@ python3 remote_command_execution_vulnerability_v2.py # Run the script
 
 ```
 Step#2 Boot BREED 
-Refer this instrution https://www.right.com.cn/forum/thread-4007071-1-1.html
+Refer to this instrution https://www.right.com.cn/forum/thread-4007071-1-1.html
 (This instruction is just a reference, make some adjustments to what you need)
 
 Go to https://breed.hackpascal.net, For RA4Gv2, download breed-mt7621-pbr-m1.bin 
