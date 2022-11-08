@@ -15,7 +15,7 @@
 git clone https://github.com/kenzok8/small-package package/small-package
 git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 git clone https://github.com/kenzok8/small package/small
-git clone https://github.com/NueXini/NueXini_Packages.git package/NueXini_Packages
+#git clone https://github.com/NueXini/NueXini_Packages.git package/NueXini_Packages
 ##git clone https://github.com/liuran001/openwrt-packages package/liuran001_packages
 
  
@@ -111,8 +111,7 @@ sed -i 's/❤/❤/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 # 修改 argon 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon_armygreen/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-edge/g' feeds/luci/collections/luci/Makefile
-
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
