@@ -11,5 +11,5 @@
 
 # MOVE Copy File
 
-mv style/favicon.ico openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/favicon.ico  
-mv style/banner openwrt/package/base-files/files/etc/banner
+mv built2/favicon.ico openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/favicon.ico  
+mv built2/banner openwrt/package/base-files/files/etc/banner
