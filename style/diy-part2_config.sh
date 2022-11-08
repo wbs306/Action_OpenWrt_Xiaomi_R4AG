@@ -16,7 +16,7 @@ git clone https://github.com/kenzok8/small-package package/small-package
 git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 git clone https://github.com/kenzok8/small package/small
 git clone https://github.com/NueXini/NueXini_Packages.git package/NueXini_Packages
-git clone https://github.com/liuran001/openwrt-packages package/liuran001_packages
+##git clone https://github.com/liuran001/openwrt-packages package/liuran001_packages
 
  
 
