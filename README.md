@@ -8,7 +8,7 @@
 
 ![image](https://user-images.githubusercontent.com/117250841/200182184-1374ebfe-cca5-40fb-a7ca-4eaa1444f2f0.png)
 
-### Refer to https://github.com/wbs306/lede
+### Refer to https://github.com/wbs306/lede and  https://github.com/wbs306/Action_OpenWrt_Xiaomi_R4AG
 ### Packages added:
  ##### 1.https://github.com/kenzok8/small-package
  ##### 2.https://github.com/jerrykuku/luci-theme-argon.git
