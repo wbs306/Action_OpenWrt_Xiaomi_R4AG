@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build R4AGv2 Style
+name: Build R4AGv2 built2
 
 on:
   repository_dispatch:
@@ -24,9 +24,9 @@ env:
   REPO_BRANCH: r4agv2
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: R4AGv2.config
-  DIY_P1_SH: style/diy-part1_feeds.sh
-  DIY_P2_SH: style/diy-part2_config.sh
-  DIY_P3_SH: style/diy-part3_mv.sh
+  DIY_P1_SH: built2/diy-part1_feeds.sh
+  DIY_P2_SH: built2/diy-part2_config.sh
+  DIY_P3_SH: built2/diy-part3_mv.sh
   PATCH_FILE: 476-mtd-spi-nor-add-eon-en25q128.patch
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: false
