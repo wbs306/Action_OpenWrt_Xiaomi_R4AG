@@ -23,4 +23,4 @@ echo 'src-git small8 https://github.com/kenzok8/small-package' >>feeds.conf.defa
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 echo 'src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' >>feeds.conf.default
-echo 'src-git liuran001_packages https://github.com/liuran001/openwrt-packages' >>feeds.conf.default
+##echo 'src-git liuran001_packages https://github.com/liuran001/openwrt-packages' >>feeds.conf.default
