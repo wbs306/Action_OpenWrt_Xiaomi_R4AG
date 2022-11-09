@@ -62,18 +62,19 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        cp $GITHUB_WORKSPACE/$PATCH_FILE $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.4/476-mtd-spi-nor-add-eon-en25q128.patch
-
-    - name: Upload mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
-      run: |
-        cp -f hw/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts openwrt/target/linux/ramips/dts
         
-    - name: Upload mt7621.mk
+    - name: Upload Files for Hardware Changes 
       run: |
+        # spi en25q128
+        cp $GITHUB_WORKSPACE/hw/$PATCH_FILE $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.4/$PATCH_FILE
+
+        # Upload mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
+        cp -f hw/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts openwrt/target/linux/ramips/dts
+
+        # Upload mt7621.mk
         cp -f hw/mt7621.mk openwrt/target/linux/ramips/image
 
-    - name: Upload 02_network
-      run: |
+        # Upload 02_network
         cp -f hw/02_network openwrt/target/linux/ramips/mt7621/base-files/etc/board.d/
 
     - name: Load custom feeds
