@@ -27,7 +27,7 @@ env:
   DIY_P1_SH: built2/light-part1_feeds.sh
   DIY_P2_SH: built2/light-part2_config.sh
   DIY_P3_SH: built2/light-part3_mv.sh
-  PATCH_FILE: hw/476-mtd-spi-nor-add-eon-en25q128.patch
+  PATCH_FILE: 476-mtd-spi-nor-add-eon-en25q128.patch
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: false
   UPLOAD_COWTRANSFER: false
@@ -66,7 +66,7 @@ jobs:
     - name: Upload Files for Hardware Changes 
       run: |
         # spi en25q128
-        cp $GITHUB_WORKSPACE/$PATCH_FILE $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.4/$PATCH_FILE
+        cp $GITHUB_WORKSPACE/hw/$PATCH_FILE $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.4/$PATCH_FILE
 
         # Upload mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
         cp -f $GITHUB_WORKSPACE/hw/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts $GITHUB_WORKSPACE/openwrt/target/linux/ramips/dts
