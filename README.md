@@ -65,3 +65,6 @@ Flash these two bin files
 2.openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2-squashfs-sysupgrade.bin
 ```
 ![image](https://user-images.githubusercontent.com/117250841/200181428-b9628072-b1d6-4f23-a799-3b06c63c12bb.png)
+
+![image](https://user-images.githubusercontent.com/117250841/200880220-1ed7a02a-c35b-4cd6-ba71-a6c85778a572.jpeg)
+
