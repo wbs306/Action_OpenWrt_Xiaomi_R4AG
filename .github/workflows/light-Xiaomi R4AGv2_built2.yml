@@ -55,6 +55,10 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
+        pip3 install meson
+        pip install six
+        sudo apt-get update
+        sudo apt-get install fxload
 
     - name: Clone source code
       working-directory: /workdir
