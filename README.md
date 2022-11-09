@@ -7,7 +7,9 @@
 
 
 
-### - Note: Welcome to try out it. [Release Bin file ](https://github.com/MrTaiKe/Action_OpenWrt_Xiaomi_R4AGv2/releases/tag/2022.11.06-1256)
+### - Note: Welcome to try out it. [Release Bin file ](https://github.com/MrTaiKe/Action_OpenWrt_Xiaomi_R4AGv2/actions/runs/3402746272)
+- build: wetransfer.com#L1 Download Link: https://we.tl/t-wUdXMxjDBz
+
 ### - You Agree to Proceed and Use at your own risk.
     openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2-squashfs-sysupgrade.bin
 
