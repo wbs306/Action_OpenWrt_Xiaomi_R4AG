@@ -7,17 +7,20 @@
 
 
 
-### - Note: Welcome to try out it. [Release Bin file ](https://github.com/MrTaiKe/Action_OpenWrt_Xiaomi_R4AGv2/actions/runs/3402746272)
-- build: wetransfer.com#L1 Download Link: https://we.tl/t-wUdXMxjDBz
+### - Note: Welcome to try out it, You Agree to Proceed and Use at your own risk. **
+- [Release Bin file ](https://github.com/MrTaiKe/Action_OpenWrt_Xiaomi_R4AGv2/actions/runs/3402746272)
+- wetransfer.com Download Link: https://we.tl/t-wUdXMxjDBz
 
-### - You Agree to Proceed and Use at your own risk.
-    openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2-squashfs-sysupgrade.bin
+```
+openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2-squashfs-sysupgrade.bin
+By the way, the password is password
+```
 
 ### - Note: LED lights seems not working properly.
 ### - Packages added:
   - https://github.com/kenzok8/small-package
   - https://github.com/jerrykuku/luci-theme-argon.git
-     
+    
 
 
 ## How to built/Compile Openwrt firmware(bin)?
