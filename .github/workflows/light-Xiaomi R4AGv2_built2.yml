@@ -55,10 +55,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        pip3 install meson
-        pip install six
-        sudo apt-get update
-        sudo apt-get install fxload
 
     - name: Clone source code
       working-directory: /workdir
@@ -69,7 +65,7 @@ jobs:
         
     - name: Upload Files for Hardware Changes 
       run: |
-        # spi en25q128
+        # SPI HW: 476-mtd-spi-nor-add-eon-en25q128
         cp $GITHUB_WORKSPACE/hw/$PATCH_FILE $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.4/$PATCH_FILE
 
         # Upload mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
