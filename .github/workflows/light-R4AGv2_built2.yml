@@ -37,7 +37,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
     - name: Checkout
@@ -67,7 +67,7 @@ jobs:
       run: |
         # SPI HW: 476-mtd-spi-nor-add-eon-en25q128
         cp $GITHUB_WORKSPACE/hw/$PATCH_FILE $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.4/$PATCH_FILE
-
+        
         # Upload mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
         cp -f $GITHUB_WORKSPACE/hw/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts $GITHUB_WORKSPACE/openwrt/target/linux/ramips/dts
 
