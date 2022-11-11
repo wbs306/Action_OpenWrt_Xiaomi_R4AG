@@ -20,8 +20,8 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede/
-  REPO_BRANCH: master 03a0395eb2
+  REPO_URL: https://github.com/wbs306/lede
+  REPO_BRANCH: r4agv2
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: built2/light-R4AGv2.config
   DIY_P1_SH: built2/light-part1_feeds.sh
