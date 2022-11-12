@@ -60,9 +60,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        #git clone $REPO_URL -b $REPO_BRANCH openwrt
-        git clone -n coolsnowwolf/lede
-        git checkout 03a0395eb25bdb0c9f45ebbf981cfc90a4ae794d
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
     - name: Upload Files for Hardware Changes 
