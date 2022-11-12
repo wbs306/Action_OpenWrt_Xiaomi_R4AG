@@ -60,7 +60,9 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        #git clone $REPO_URL -b $REPO_BRANCH openwrt
+        git clone -n $REPO_URL
+        git checkout 03a0395eb25bdb0c9f45ebbf981cfc90a4ae794d
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
     - name: Upload Files for Hardware Changes 
