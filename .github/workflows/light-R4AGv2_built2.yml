@@ -20,8 +20,8 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/wbs306/lede
+  REPO_BRANCH: r4agv2
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: built2/light-R4AGv2.config
   DIY_P1_SH: built2/light-part1_feeds.sh
@@ -61,7 +61,7 @@ jobs:
       run: |
         df -hT $PWD
         #git clone $REPO_URL -b $REPO_BRANCH openwrt
-        git clone -n $REPO_URL
+        git clone -n coolsnowwolf/lede
         git checkout 03a0395eb25bdb0c9f45ebbf981cfc90a4ae794d
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
