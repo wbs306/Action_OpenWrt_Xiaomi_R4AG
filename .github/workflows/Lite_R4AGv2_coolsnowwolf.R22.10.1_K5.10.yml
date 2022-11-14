@@ -72,6 +72,9 @@ jobs:
 
         # Copy config-5.10
         cp $GITHUB_WORKSPACE/hw/5.10/config-5.10 $GITHUB_WORKSPACE/openwrt/target/linux/ramips/mt7621/config-5.10
+
+        # REMOVE config-5.4
+        rm -f $GITHUB_WORKSPACE/openwrt/target/linux/ramips/mt7621/config-5.4
         
         # REMOVE 499-mtd-spi-nor-add-xmc-xm25qh128c.patch
         rm -f $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.10/499-mtd-spi-nor-add-xmc-xm25qh128c.patch
