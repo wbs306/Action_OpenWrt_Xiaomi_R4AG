@@ -123,9 +123,9 @@ tplink,re650-v1)
 	ucidef_set_led_netdev "eth_act" "LAN act" "green:eth_act" "lan" "tx rx"
 	ucidef_set_led_netdev "eth_link" "LAN link" "green:eth_link" "lan" "link"
 	;;
-xiaomi,mmi-router-4a-gigabit-v2)
+xiaomi,mi-router-4a-gigabit-v2)
 	ucidef_set_led_switch "wan" "wan" "blue:status" "switch0" "0x1"
-  ;;
+  	;;
 xiaomi,mi-router-ac2100)
 	ucidef_set_led_switch "wan" "wan" "blue:wan" "switch0" "0x1"
 	;;
