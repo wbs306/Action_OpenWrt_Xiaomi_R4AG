@@ -62,4 +62,4 @@ jobs:
         git clone --single-branch --branch $REPO_BRANCH $REPO_URL openwrt
         cd openwrt 
         git branch --all
-        git clone --single-branch -branch v22.03.2 https://github.com/openwrt/openwrt.git
+        git clone --single-branch --branch v22.03.2 https://github.com/openwrt/openwrt.git openwrt2
