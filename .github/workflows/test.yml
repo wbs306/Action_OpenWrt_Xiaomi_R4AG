@@ -1,6 +1,6 @@
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede.git
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/openwrt/openwrt.git
+  REPO_BRANCH: openwrt-22.03
 
 
 jobs:
