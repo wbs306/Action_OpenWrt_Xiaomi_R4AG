@@ -1,3 +1,6 @@
+name: Test
+
+
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: openwrt-22.03
