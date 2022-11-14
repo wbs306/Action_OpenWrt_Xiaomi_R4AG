@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Built2 R4AGv2 Lite coolsnowwolf/lede R22.10.1_K5.10
+name: Built2 R4AGv2 Lite CSW/lede R22.10.1_K5.10
 
 on:
   repository_dispatch:
@@ -77,7 +77,7 @@ jobs:
         rm -f $GITHUB_WORKSPACE/openwrt/target/linux/ramips/mt7621/config-5.4
         
         # REMOVE 499-mtd-spi-nor-add-xmc-xm25qh128c.patch
-        rm -f $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.10/499-mtd-spi-nor-add-xmc-xm25qh128c.patch
+        #rm -f $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.10/499-mtd-spi-nor-add-xmc-xm25qh128c.patch
         
         # Upload mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
         cp -f $GITHUB_WORKSPACE/hw/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts $GITHUB_WORKSPACE/openwrt/target/linux/ramips/dts
