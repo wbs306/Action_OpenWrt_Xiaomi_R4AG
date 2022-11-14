@@ -7,8 +7,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Built2 R4AGv2_light coolsnowwolf/lede
-
+name: Test
 on:
   repository_dispatch:
   workflow_dispatch:
