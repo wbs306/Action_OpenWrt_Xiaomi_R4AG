@@ -59,8 +59,9 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone --single-branch -b $REPO_BRANCH $REPO_URL openwrt
-        cd openwrt
-        git status
-        git clone --single-branch -b v22.03.2 https://github.com/openwrt/openwrt.git
-        
+<<<<<<< HEAD
+        git clone --single-branch --branch $REPO_BRANCH $REPO_URL openwrt
+        cd openwrt 
+        git branch --all
+        git clone --single-branch -branch v22.03.2 https://github.com/openwrt/openwrt.git
+=======
