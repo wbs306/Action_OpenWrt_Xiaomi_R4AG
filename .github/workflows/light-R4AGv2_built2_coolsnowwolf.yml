@@ -78,7 +78,7 @@ jobs:
         cp -f $GITHUB_WORKSPACE/hw/mt7621.mk $GITHUB_WORKSPACE/openwrt/target/linux/ramips/image
 
         ## Upload 01_leds
-        ## cp -f $GITHUB_WORKSPACE/hw/01_leds $GITHUB_WORKSPACE/openwrt/target/linux/ramips/mt7621/base-files/etc/board.d
+        cp -f $GITHUB_WORKSPACE/hw/01_leds $GITHUB_WORKSPACE/openwrt/target/linux/ramips/mt7621/base-files/etc/board.d
 
         # Upload 02_network
         cp -f $GITHUB_WORKSPACE/hw/02_network $GITHUB_WORKSPACE/openwrt/target/linux/ramips/mt7621/base-files/etc/board.d
