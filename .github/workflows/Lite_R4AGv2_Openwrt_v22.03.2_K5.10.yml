@@ -64,7 +64,7 @@ jobs:
         #git clone --single-branch --branch 20221001 https://github.com/coolsnowwolf/lede.git
         git clone --single-branch --branch $REPO_BRANCH $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
+        echo $GITHUB_WORKSPACE
         
     - name: Upload Files for Hardware Changes 
       run: |
@@ -103,8 +103,6 @@ jobs:
     - name: Install feeds
       run: |
         cd openwrt && ./scripts/feeds install -a
-        opkg update
-        opkg install luci
 
     - name: Load custom configuration
       run: |

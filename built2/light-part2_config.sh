@@ -13,10 +13,10 @@
 
 # Add Theme package
 rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git openwrt/package/lean/luci-theme-argon
 
 #rm -rf package/lean/luci-theme-argon_armygreen
-#git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
+#git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git openwrt/package/lean/luci-theme-argon_armygreen
 
 
 # Basic Modification 
