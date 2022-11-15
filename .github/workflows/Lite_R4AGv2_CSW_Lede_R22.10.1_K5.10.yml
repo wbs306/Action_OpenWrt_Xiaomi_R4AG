@@ -57,13 +57,13 @@ jobs:
         sudo chown $USER:$GROUPS /workdir
 
     - name: Clone source code
-      working-directory: workdir
+      working-directory: /workdir
       run: |
         df -hT $PWD
         #git clone $REPO_URL -b $REPO_BRANCH openwrt
         #git clone --single-branch --branch 20221001 https://github.com/coolsnowwolf/lede.git
         git clone --single-branch --branch $REPO_BRANCH $REPO_URL openwrt
-        ln -sf workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
     - name: Upload Files for Hardware Changes 
       run: |
