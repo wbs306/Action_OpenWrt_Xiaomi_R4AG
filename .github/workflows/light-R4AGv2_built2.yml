@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/wbs306/lede
   REPO_BRANCH: r4agv2
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: built2/light-R4AGv2.config
+  CONFIG_FILE: built2/openvpnOnly.config
   DIY_P1_SH: built2/light-part1_feeds.sh
   DIY_P2_SH: built2/light-part2_config.sh
   DIY_P3_SH: built2/light-part3_mv.sh
