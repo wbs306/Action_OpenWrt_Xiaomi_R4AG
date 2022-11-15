@@ -50,10 +50,8 @@ jobs:
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
         sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
-        sudo -E apt-get -qq autoremove --purge
-        sudo -E apt-get -qq clean
-        
         sudo apt update -y
+
         sudo apt full-upgrade -y
         sudo apt install -y ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential \
         bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib \
@@ -62,18 +60,20 @@ jobs:
         mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip libpython3-dev qemu-utils \
         rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 
+        sudo -E apt-get -qq autoremove --purge
+        sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
+        sudo mkdir -p workdir
+        sudo chown $USER:$GROUPS workdir
 
     - name: Clone source code
-      working-directory: /workdir
+      working-directory: workdir
       run: |
         df -hT $PWD
         #git clone $REPO_URL -b $REPO_BRANCH openwrt
         #git clone --single-branch --branch 20221001 https://github.com/coolsnowwolf/lede.git
         git clone --single-branch --branch $REPO_BRANCH $REPO_URL openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        ln -sf workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
     - name: Upload Files for Hardware Changes 
       run: |
@@ -87,7 +87,7 @@ jobs:
         rm -f $GITHUB_WORKSPACE/openwrt/target/linux/ramips/mt7621/config-5.4
         
         # REMOVE 499-mtd-spi-nor-add-xmc-xm25qh128c.patch
-        rm -f $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.10/499-mtd-spi-nor-add-xmc-xm25qh128c.patch
+        #rm -f $GITHUB_WORKSPACE/openwrt/target/linux/generic/pending-5.10/499-mtd-spi-nor-add-xmc-xm25qh128c.patch
         
         # Upload mt7621_xiaomi_mi-router-4a-gigabit-v2.dts
         cp -f $GITHUB_WORKSPACE/hw/mt7621_xiaomi_mi-router-4a-gigabit-v2.dts $GITHUB_WORKSPACE/openwrt/target/linux/ramips/dts
@@ -132,9 +132,9 @@ jobs:
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
-      env:
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      # env:
+      #  TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      #  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
     - name: Download package
       id: package
@@ -150,7 +150,7 @@ jobs:
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 || make -j1 V=s
+        make -j$(nproc) V=sc
         echo "::set-output name=status::success"  
         #echo "status = success" >> $GITHUB_OUTPUT
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
