@@ -50,8 +50,8 @@ jobs:
         #sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
         sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)        
-        #sudo -E apt-get -qq autoremove --purge
-        #sudo -E apt-get -qq clean
+        sudo -E apt-get -qq autoremove --purge
+        sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
@@ -64,6 +64,7 @@ jobs:
         #git clone --single-branch --branch 20221001 https://github.com/coolsnowwolf/lede.git
         git clone --single-branch --branch $REPO_BRANCH $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+
         
     - name: Upload Files for Hardware Changes 
       run: |
@@ -100,7 +101,10 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
+      run: |
+        cd openwrt && ./scripts/feeds install -a
+        opkg update
+        opkg install luci
 
     - name: Load custom configuration
       run: |
