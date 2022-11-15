@@ -186,7 +186,7 @@ jobs:
 
     - name: Generate release tag
       id: tag
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"  
         #echo "release_tag = $(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT 
