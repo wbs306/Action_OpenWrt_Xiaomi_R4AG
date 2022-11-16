@@ -1,11 +1,11 @@
 # For Openwrt (Not for LEDE)
 # Description: OpenWrt DIY script part 2 Configuration (After Update feeds)
 
-# Add Theme package
-rm -rf package/luci-theme-argon
-rm -rf package/luci-app-argon-config
-sudo git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-sudo git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+# # Add Theme package
+# rm -rf package/luci-theme-argon
+# rm -rf package/luci-app-argon-config
+# sudo git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# sudo git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 
 # Basic Modification 
