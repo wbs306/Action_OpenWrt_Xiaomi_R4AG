@@ -13,10 +13,9 @@
 
 # Add Theme package
 rm -rf package/lean/luci-theme-argon
-sudo git clone -b 19.07 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-
-wget --no-check-certificate https://github.com/jerrykuku/luci-app-argon-config/releases/download/v0.8-beta/luci-app-argon-config_0.8-beta_all.ipk
-opkg install luci-app-argon-config_0.8-beta_all.ipk
+rm -rf package/lean/luci-app-argon-config
+sudo git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+sudo git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 
 
 #########################################################
