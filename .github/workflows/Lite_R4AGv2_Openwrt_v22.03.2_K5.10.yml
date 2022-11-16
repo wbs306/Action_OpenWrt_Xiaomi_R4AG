@@ -22,11 +22,11 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: v22.03.2
-  FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: built2/light-R4AGv2.config
-  DIY_P1_SH: built2/light-part1_feeds.sh
-  DIY_P2_SH: built2/light-part2_config.sh
-  DIY_P3_SH: built2/light-part3_mv.sh
+  FEEDS_CONF: Opwt_v22.03.02_feeds.conf.default
+  CONFIG_FILE: Opwt-R4AGv2.config
+  DIY_P1_SH: Opwt-p1_feeds.sh
+  DIY_P2_SH: Opwt-p2_config.sh
+  DIY_P3_SH: Opwt-p3_mv.sh
   PATCH_FILE: 476-mtd-spi-nor-add-eon-en25q128.patch
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
@@ -66,7 +66,6 @@ jobs:
       run: |
         df -hT $PWD
         #git clone $REPO_URL -b $REPO_BRANCH openwrt
-        #git clone --single-branch --branch 20221001 https://github.com/coolsnowwolf/lede.git
         git clone --single-branch --branch $REPO_BRANCH $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         echo $GITHUB_WORKSPACE
