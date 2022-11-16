@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Built2 R4AGv2 Lite Openwrt v22.03.2_K5.10
+name: Built Openwrt v22.03.2
 
 on:
   repository_dispatch:
