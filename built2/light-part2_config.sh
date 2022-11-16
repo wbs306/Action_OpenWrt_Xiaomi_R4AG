@@ -11,25 +11,11 @@
 # Description: OpenWrt DIY script part 2 Configuration (After Update feeds)
 #
 
-# Add Theme package
-rm -rf package/lean/luci-theme-argon
-rm -rf package/lean/luci-app-argon-config
-sudo git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-sudo git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
-
-
-#########################################################
-#rm -rf package/lean/luci-theme-argon_armygreen
-#git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
-
-#登陆页面右下角技术支持  跳转网站“https://github.com/openwrt/luci”   名称“可爱动漫主题”
-#sed -i 's/可爱动漫主题/可爱动漫主题/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
-
-#主机名右上角符号❤
-#sed -i 's/❤/❤/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
-
-#########################################################
-
+# # Add Theme package
+# rm -rf package/lean/luci-theme-argon
+# rm -rf package/lean/luci-app-argon-config
+# sudo git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+# sudo git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 
 # Basic Modification 
 
@@ -55,5 +41,11 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 # 修改 argon 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
+#########################################################
+#登陆页面右下角技术支持  跳转网站“https://github.com/openwrt/luci”   名称“可爱动漫主题”
+#sed -i 's/可爱动漫主题/可爱动漫主题/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
 
+#主机名右上角符号❤
+#sed -i 's/❤/❤/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
+#########################################################
 
