@@ -54,7 +54,7 @@ jobs:
         libglib2.0-dev xmlto qemu-utils upx autoconf automake libtool autopoint device-tree-compiler g++-multilib \
         antlr3 gperf curl  
 
-        sudo -E apt-get -qq install binutils bzip2 flex gawk grep libc-dev libz-dev make4.1+ perl python3.6+ rsync subversion unzip which
+        sudo -E apt-get -qq install binutils bzip2 flex gawk grep libc-dev libz-dev perl python3.6+ rsync subversion unzip
 
         sudo -E apt-get -qq install build-essential clang flex g++ gawk gcc-multilib gettext \
         git libncurses5-dev libssl-dev python3-distutils rsync unzip zlib1g-dev 
@@ -62,6 +62,7 @@ jobs:
         sudo -E apt-get -qq install ccache ecj fastjar file g++ \
         java-propose-classpath libelf-dev libncursesw5-dev python python2.7-dev python3 wget \
         python-distutils-extra python3-setuptools python3-dev swig time xsltproc 
+
 
     - name: Clone source code
       working-directory: /workdir
